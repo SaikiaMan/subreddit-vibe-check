@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
+import { Nunito } from "next/font/google";
 import "./globals.css";
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "600", "700", "800", "900"],
+  variable: "--font-nunito",
+});
 
 export const metadata: Metadata = {
   title: "The Subreddit Vibe Check",
@@ -13,7 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body
+        className={`${nunito.variable} font-sans antialiased`}
+        style={{ fontFamily: "var(--font-nunito), sans-serif" }}
+      >
+        {children}
+      </body>
     </html>
   );
 }

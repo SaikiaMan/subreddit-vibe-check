@@ -1,45 +1,64 @@
-import { getHotPosts } from "@/lib/reddit";
+import { fetchSubredditPosts } from "@/lib/redditData";
+import { analyzeSentiment, type SentimentType } from "@/lib/sentiment";
+import { Dashboard } from "./components/Dashboard";
 
-export default async function Home() {
-  const posts = await getHotPosts("programming");
+interface HomeProps {
+  searchParams: Promise<{
+    subreddit?: string;
+  }>;
+}
+
+export default async function Home({ searchParams }: HomeProps) {
+  const params = await searchParams;
+  const subreddit = params.subreddit?.trim() || "programming";
+
+  const posts = await fetchSubredditPosts(subreddit);
+
+  const analyzedPosts = posts.map((post) => ({
+    ...post,
+    sentiment: analyzeSentiment(post.title),
+  }));
+
+  const positive = analyzedPosts.filter(
+    (post) => post.sentiment.type === "positive",
+  ).length;
+
+  const neutral = analyzedPosts.filter(
+    (post) => post.sentiment.type === "neutral",
+  ).length;
+
+  const negative = analyzedPosts.filter(
+    (post) => post.sentiment.type === "negative",
+  ).length;
+
+  const total = analyzedPosts.length;
+
+  const positivePercentage = Math.round((positive / total) * 100);
+  const neutralPercentage = Math.round((neutral / total) * 100);
+  const negativePercentage = Math.round((negative / total) * 100);
+
+  let overallVibe: SentimentType = "neutral";
+
+  if (positive > negative) {
+    overallVibe = "positive";
+  } else if (negative > positive) {
+    overallVibe = "negative";
+  }
 
   return (
-    <main
-      style={{
-        maxWidth: "1000px",
-        margin: "0 auto",
-        padding: "40px 20px",
+    <Dashboard
+      subreddit={subreddit}
+      analyzedPosts={analyzedPosts}
+      stats={{
+        positive,
+        neutral,
+        negative,
+        total,
+        positivePercentage,
+        neutralPercentage,
+        negativePercentage,
+        overallVibe,
       }}
-    >
-      <h1>The Subreddit Vibe Check</h1>
-
-      <p>
-        Reddit API test — r/programming
-      </p>
-
-      <h2>
-        Posts received: {posts.length}
-      </h2>
-
-      <div>
-        {posts.map((post) => (
-          <article
-            key={post.id}
-            style={{
-              padding: "20px 0",
-              borderBottom: "1px solid #ddd",
-            }}
-          >
-            <h3>{post.title}</h3>
-
-            <p>
-              👍 {post.score} &nbsp;•&nbsp;
-              💬 {post.comments} &nbsp;•&nbsp;
-              u/{post.author}
-            </p>
-          </article>
-        ))}
-      </div>
-    </main>
+    />
   );
 }
