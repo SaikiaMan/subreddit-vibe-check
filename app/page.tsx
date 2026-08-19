@@ -1,6 +1,7 @@
 import { fetchSubredditPosts } from "@/lib/redditData";
 import { analyzeSentiment, type SentimentType } from "@/lib/sentiment";
 import { Dashboard } from "./components/Dashboard";
+import { ErrorState } from "./components/ErrorState";
 
 interface HomeProps {
   searchParams: Promise<{
@@ -8,11 +9,45 @@ interface HomeProps {
   }>;
 }
 
+function computeVibeScore(analyzedPosts: { sentiment: { score: number } }[]): number {
+  if (analyzedPosts.length === 0) return 0;
+
+  const maxPossible = analyzedPosts.length * 5;
+  const sum = analyzedPosts.reduce(
+    (acc, post) => acc + post.sentiment.score,
+    0,
+  );
+
+  return Math.max(-1, Math.min(1, sum / maxPossible));
+}
+
 export default async function Home({ searchParams }: HomeProps) {
   const params = await searchParams;
   const subreddit = params.subreddit?.trim() || "programming";
 
-  const posts = await fetchSubredditPosts(subreddit);
+  let posts: Awaited<ReturnType<typeof fetchSubredditPosts>>;
+
+  try {
+    posts = await fetchSubredditPosts(subreddit);
+  } catch (error) {
+    const message =
+      error instanceof Error ? error.message : "Something went wrong.";
+    return (
+      <ErrorState
+        title="Something went wrong while loading the subreddit."
+        message={message}
+      />
+    );
+  }
+
+  if (posts.length === 0) {
+    return (
+      <ErrorState
+        title="No posts available to analyze."
+        message="We couldn't find posts for this subreddit."
+      />
+    );
+  }
 
   const analyzedPosts = posts.map((post) => ({
     ...post,
@@ -50,14 +85,12 @@ export default async function Home({ searchParams }: HomeProps) {
       subreddit={subreddit}
       analyzedPosts={analyzedPosts}
       stats={{
-        positive,
-        neutral,
-        negative,
+        positive: { count: positive, percentage: positivePercentage },
+        neutral: { count: neutral, percentage: neutralPercentage },
+        negative: { count: negative, percentage: negativePercentage },
         total,
-        positivePercentage,
-        neutralPercentage,
-        negativePercentage,
         overallVibe,
+        vibeScore: computeVibeScore(analyzedPosts),
       }}
     />
   );

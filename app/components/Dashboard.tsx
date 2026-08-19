@@ -1,102 +1,77 @@
-"use client";
-
-import { useState } from "react";
 import type { RedditPost } from "@/lib/reddit";
 import type { SentimentResult, SentimentType } from "@/lib/sentiment";
-import { Sidebar } from "./Sidebar";
-import { DashboardHeader } from "./DashboardHeader";
-import { StatCard } from "./StatCard";
-import { VibeCard } from "./VibeCard";
-import { Segmentation } from "./Segmentation";
-import { SentimentChart } from "./SentimentChart";
+import SubredditSearch from "../SubredditSearch";
+import { DemoBadge } from "./DemoBadge";
+import { DistributionBar } from "./DistributionBar";
+import { Header } from "./Header";
 import { PostList } from "./PostList";
+import { StatCards } from "./StatCards";
+import { VibeCard } from "./VibeCard";
+import { VibeScore } from "./VibeScore";
 
 interface DashboardProps {
   subreddit: string;
   analyzedPosts: Array<RedditPost & { sentiment: SentimentResult }>;
   stats: {
-    positive: number;
-    neutral: number;
-    negative: number;
+    positive: { count: number; percentage: number };
+    neutral: { count: number; percentage: number };
+    negative: { count: number; percentage: number };
     total: number;
-    positivePercentage: number;
-    neutralPercentage: number;
-    negativePercentage: number;
     overallVibe: SentimentType;
+    vibeScore: number;
   };
 }
 
 export function Dashboard({ subreddit, analyzedPosts, stats }: DashboardProps) {
-  const [showSidebar, setShowSidebar] = useState(false);
-
   return (
-    <div className="flex min-h-screen">
-      <Sidebar
-        showSidebar={showSidebar}
-        onSidebarHide={() => setShowSidebar(false)}
-      />
-      <div className="flex w-full">
-        <div className="hidden h-screen w-20 flex-shrink-0 sm:block xl:w-60">
-          .
+    <main className="min-h-screen bg-slate-50 px-4 py-8 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl">
+        <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <DemoBadge />
+          <p className="text-sm text-slate-500">
+            Analyzing <span className="font-semibold text-slate-900">r/{subreddit}</span>
+          </p>
         </div>
-        <div className="flex h-screen flex-grow flex-wrap content-start overflow-auto overflow-x-hidden p-2">
-          <div className="w-full p-2 sm:flex sm:items-end">
-            <DashboardHeader
-              initialSubreddit={subreddit}
-              onSidebarShow={() => setShowSidebar(true)}
-            />
-          </div>
 
-          <div className="w-full p-2 lg:w-1/3">
+        <Header />
+
+        <section className="mb-8">
+          <SubredditSearch initialSubreddit={subreddit} />
+        </section>
+
+        <div className="grid gap-6 lg:grid-cols-3">
+          <div className="lg:col-span-2">
             <VibeCard overallVibe={stats.overallVibe} total={stats.total} />
           </div>
-
-          <div className="w-full p-2 lg:w-1/3">
-            <StatCard
-              type="positive"
-              percentage={stats.positivePercentage}
-              count={stats.positive}
-            />
-          </div>
-
-          <div className="w-full p-2 lg:w-1/3">
-            <StatCard
-              type="neutral"
-              percentage={stats.neutralPercentage}
-              count={stats.neutral}
-            />
-          </div>
-
-          <div className="w-full p-2 lg:w-2/3">
-            <div className="h-60 rounded-lg bg-card sm:h-80">
-              <SentimentChart />
-            </div>
-          </div>
-
-          <div className="w-full p-2 lg:w-1/3">
-            <Segmentation
-              counts={{
-                positive: stats.positive,
-                neutral: stats.neutral,
-                negative: stats.negative,
-              }}
-              total={stats.total}
-            />
-          </div>
-
-          <div className="w-full p-2 lg:w-1/3">
-            <StatCard
-              type="negative"
-              percentage={stats.negativePercentage}
-              count={stats.negative}
-            />
-          </div>
-
-          <div className="w-full p-2 lg:w-2/3">
-            <PostList posts={analyzedPosts} />
+          <div>
+            <VibeScore score={stats.vibeScore} />
           </div>
         </div>
+
+        <div className="mt-6">
+          <StatCards
+            stats={{
+              positive: stats.positive,
+              neutral: stats.neutral,
+              negative: stats.negative,
+            }}
+          />
+        </div>
+
+        <div className="mt-6">
+          <DistributionBar
+            stats={{
+              positive: stats.positive,
+              neutral: stats.neutral,
+              negative: stats.negative,
+            }}
+          />
+        </div>
+
+        <div className="mt-6">
+          <PostList posts={analyzedPosts} />
+        </div>
       </div>
-    </div>
+    </main>
   );
 }

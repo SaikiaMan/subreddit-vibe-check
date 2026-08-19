@@ -1,63 +1,57 @@
-"use client";
+import { Icon } from "./Icon";
 
-import type { SentimentType } from "@/lib/sentiment";
+const segmentationData = [
+  { c1: "Not Specified", c2: "800", c3: "#363636", color: "#535353" },
+  { c1: "Male", c2: "441", c3: "#818bb1", color: "#595f77" },
+  { c1: "Female", c2: "233", c3: "#2c365d", color: "#232942" },
+  { c1: "Other", c2: "126", c3: "#334ed8", color: "#2c3051" },
+];
 
-interface SegmentationProps {
-  counts: Record<SentimentType, number>;
-  total: number;
-}
-
-export function Segmentation({ counts, total }: SegmentationProps) {
-  const data = [
-    { c1: "Positive", c2: counts.positive, c3: "#22c55e" },
-    { c1: "Neutral", c2: counts.neutral, c3: "#a1a0a0" },
-    { c1: "Negative", c2: counts.negative, c3: "#ef4444" },
-  ];
-
+export function Segmentation() {
   return (
-    <div className="h-full rounded-lg bg-card p-4">
+    <div className="h-full p-4">
       <div className="flex items-center justify-between">
-        <div className="font-bold text-white">Sentiment Breakdown</div>
+        <div className="font-bold text-white">Segmentation</div>
+
+        <Icon path="res-react-dash-options" className="h-2 w-2" />
       </div>
-      <div className="mt-3 text-sm text-gray-400">All analyzed posts</div>
-      {data.map(({ c1, c2, c3 }) => {
-        const width = total > 0 ? (c2 / total) * 100 : 0;
-        return (
-          <div className="mt-3 flex items-center" key={c1}>
+      <div className="mt-3">All users</div>
+      {segmentationData.map(({ c1, c2, c3, color }) => (
+        <div className="flex items-center" key={c1}>
+          <div
+            className="h-2 w-2 rounded-full"
+            style={{
+              background: color,
+            }}
+          />
+          <div className="ml-2" style={{ color }}>
+            {c1}
+          </div>
+          <div className="flex-grow" />
+          <div style={{ color }}>{c2}</div>
+          <div className="card-stack-border ml-2 w-12" />
+          <div className="ml-2 h-8">
             <div
-              className="h-2 w-2 rounded-full"
-              style={{ background: c3 }}
-            />
-            <div className="ml-2 text-sm" style={{ color: c3 }}>
-              {c1}
-            </div>
-            <div className="flex-grow" />
-            <div className="text-sm" style={{ color: c3 }}>
-              {c2}
-            </div>
-            <div className="ml-3 w-24 rounded-sm bg-[#2d2d2d]">
-              <div
-                className="h-1 rounded-sm"
-                style={{ width: `${width}%`, background: c3 }}
-              />
+              className="h-28 w-20 overflow-hidden rounded-lg"
+              style={{
+                background: c3,
+              }}
+            >
+              {c1 === "Other" && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src="https://assets.codepen.io/3685267/res-react-dash-user-card.svg"
+                  alt=""
+                />
+              )}
             </div>
           </div>
-        );
-      })}
+        </div>
+      ))}
 
-      <div className="mt-4 flex h-12 w-36 items-center justify-between rounded-xl bg-details px-3">
-        <div className="text-sm">Details</div>
-        <svg
-          className="h-4 w-4 text-gray-400"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <polyline points="9 18 15 12 9 6" />
-        </svg>
+      <div className="bg-details mt-3 flex h-12 w-36 items-center justify-between rounded-xl px-3">
+        <div>Details</div>
+        <Icon path="res-react-dash-chevron-right" className="h-4 w-4" />
       </div>
     </div>
   );

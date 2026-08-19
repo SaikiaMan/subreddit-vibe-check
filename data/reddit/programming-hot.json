@@ -1,0 +1,661 @@
+{
+  "kind": "Listing",
+  "data": {
+    "after": null,
+    "dist": 50,
+    "modhash": "",
+    "geo_filter": "",
+    "children": [
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-1",
+          "title": "This new technology is absolutely amazing!",
+          "author": "demo_user_1",
+          "score": 15420,
+          "num_comments": 842,
+          "url": "https://example.com/tech-1",
+          "permalink": "/r/programming/comments/demo-1/this_new_technology_is_absolutely_amazing/",
+          "created_utc": 1700000000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-2",
+          "title": "I love how much better this update has become",
+          "author": "demo_user_2",
+          "score": 12300,
+          "num_comments": 512,
+          "url": "https://example.com/tech-2",
+          "permalink": "/r/programming/comments/demo-2/i_love_how_much_better_this_update_has_become/",
+          "created_utc": 1700010000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-3",
+          "title": "The community is doing a great job with open source",
+          "author": "demo_user_3",
+          "score": 9800,
+          "num_comments": 310,
+          "url": "https://example.com/tech-3",
+          "permalink": "/r/programming/comments/demo-3/the_community_is_doing_a_great_job_with_open_source/",
+          "created_utc": 1700020000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-4",
+          "title": "This is probably the best feature released this year",
+          "author": "demo_user_4",
+          "score": 8750,
+          "num_comments": 198,
+          "url": "https://example.com/tech-4",
+          "permalink": "/r/programming/comments/demo-4/this_is_probably_the_best_feature_released_this_year/",
+          "created_utc": 1700030000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-5",
+          "title": "What do you think about this new development?",
+          "author": "demo_user_5",
+          "score": 7200,
+          "num_comments": 640,
+          "url": "https://example.com/tech-5",
+          "permalink": "/r/programming/comments/demo-5/what_do_you_think_about_this_new_development/",
+          "created_utc": 1700040000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-6",
+          "title": "Interesting discussion about the future of technology",
+          "author": "demo_user_6",
+          "score": 6400,
+          "num_comments": 275,
+          "url": "https://example.com/tech-6",
+          "permalink": "/r/programming/comments/demo-6/interesting_discussion_about_the_future_of_technology/",
+          "created_utc": 1700050000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-7",
+          "title": "Can someone explain how this works?",
+          "author": "demo_user_7",
+          "score": 5300,
+          "num_comments": 420,
+          "url": "https://example.com/tech-7",
+          "permalink": "/r/programming/comments/demo-7/can_someone_explain_how_this_works/",
+          "created_utc": 1700060000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-8",
+          "title": "This update completely ruined everything for our team",
+          "author": "demo_user_8",
+          "score": 4900,
+          "num_comments": 890,
+          "url": "https://example.com/tech-8",
+          "permalink": "/r/programming/comments/demo-8/this_update_completely_ruined_everything_for_our_team/",
+          "created_utc": 1700070000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-9",
+          "title": "I am really disappointed with this change",
+          "author": "demo_user_9",
+          "score": 3800,
+          "num_comments": 330,
+          "url": "https://example.com/tech-9",
+          "permalink": "/r/programming/comments/demo-9/i_am_really_disappointed_with_this_change/",
+          "created_utc": 1700080000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-10",
+          "title": "This is the worst update I've seen in years",
+          "author": "demo_user_10",
+          "score": 2100,
+          "num_comments": 156,
+          "url": "https://example.com/tech-10",
+          "permalink": "/r/programming/comments/demo-10/this_is_the_worst_update_ive_seen_in_years/",
+          "created_utc": 1700090000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-11",
+          "title": "A beginner's guide to modern web development",
+          "author": "demo_user_11",
+          "score": 11200,
+          "num_comments": 245,
+          "url": "https://example.com/tech-11",
+          "permalink": "/r/programming/comments/demo-11/a_beginners_guide_to_modern_web_development/",
+          "created_utc": 1700100000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-12",
+          "title": "Why I switched from Python to Go for backend services",
+          "author": "demo_user_12",
+          "score": 9800,
+          "num_comments": 560,
+          "url": "https://example.com/tech-12",
+          "permalink": "/r/programming/comments/demo-12/why_i_switched_from_python_to_go_for_backend_services/",
+          "created_utc": 1700110000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-13",
+          "title": "The state of JavaScript frameworks in 2026",
+          "author": "demo_user_13",
+          "score": 8500,
+          "num_comments": 720,
+          "url": "https://example.com/tech-13",
+          "permalink": "/r/programming/comments/demo-13/the_state_of_javascript_frameworks_in_2026/",
+          "created_utc": 1700120000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-14",
+          "title": "Database migration horror stories",
+          "author": "demo_user_14",
+          "score": 7400,
+          "num_comments": 410,
+          "url": "https://example.com/tech-14",
+          "permalink": "/r/programming/comments/demo-14/database_migration_horror_stories/",
+          "created_utc": 1700130000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-15",
+          "title": "How we reduced our CI build time by 70%",
+          "author": "demo_user_15",
+          "score": 6900,
+          "num_comments": 180,
+          "url": "https://example.com/tech-15",
+          "permalink": "/r/programming/comments/demo-15/how_we_reduced_our_ci_build_time_by_70/",
+          "created_utc": 1700140000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-16",
+          "title": "Code review practices that actually work",
+          "author": "demo_user_16",
+          "score": 6300,
+          "num_comments": 290,
+          "url": "https://example.com/tech-16",
+          "permalink": "/r/programming/comments/demo-16/code_review_practices_that_actually_work/",
+          "created_utc": 1700150000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-17",
+          "title": "Rust vs C++: a practical comparison",
+          "author": "demo_user_17",
+          "score": 8200,
+          "num_comments": 950,
+          "url": "https://example.com/tech-17",
+          "permalink": "/r/programming/comments/demo-17/rust_vs_c_a_practical_comparison/",
+          "created_utc": 1700160000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-18",
+          "title": "I built a small tool and learned a lot",
+          "author": "demo_user_18",
+          "score": 4500,
+          "num_comments": 130,
+          "url": "https://example.com/tech-18",
+          "permalink": "/r/programming/comments/demo-18/i_built_a_small_tool_and_learned_a_lot/",
+          "created_utc": 1700170000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-19",
+          "title": "The hidden costs of microservices",
+          "author": "demo_user_19",
+          "score": 7600,
+          "num_comments": 520,
+          "url": "https://example.com/tech-19",
+          "permalink": "/r/programming/comments/demo-19/the_hidden_costs_of_microservices/",
+          "created_utc": 1700180000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-20",
+          "title": "What matters most in senior engineering interviews",
+          "author": "demo_user_20",
+          "score": 5800,
+          "num_comments": 340,
+          "url": "https://example.com/tech-20",
+          "permalink": "/r/programming/comments/demo-20/what_matters_most_in_senior_engineering_interviews/",
+          "created_utc": 1700190000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-21",
+          "title": "My favorite underrated developer tools",
+          "author": "demo_user_21",
+          "score": 4100,
+          "num_comments": 210,
+          "url": "https://example.com/tech-21",
+          "permalink": "/r/programming/comments/demo-21/my_favorite_underrated_developer_tools/",
+          "created_utc": 1700200000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-22",
+          "title": "Stop using console.log for debugging",
+          "author": "demo_user_22",
+          "score": 9200,
+          "num_comments": 670,
+          "url": "https://example.com/tech-22",
+          "permalink": "/r/programming/comments/demo-22/stop_using_consolelog_for_debugging/",
+          "created_utc": 1700210000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-23",
+          "title": "A deep dive into how React Server Components work",
+          "author": "demo_user_23",
+          "score": 10500,
+          "num_comments": 480,
+          "url": "https://example.com/tech-23",
+          "permalink": "/r/programming/comments/demo-23/a_deep_dive_into_how_react_server_components_work/",
+          "created_utc": 1700220000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-24",
+          "title": "Why I regret choosing MongoDB for this project",
+          "author": "demo_user_24",
+          "score": 6700,
+          "num_comments": 880,
+          "url": "https://example.com/tech-24",
+          "permalink": "/r/programming/comments/demo-24/why_i_regret_choosing_mongodb_for_this_project/",
+          "created_utc": 1700230000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-25",
+          "title": "The best free resources to learn TypeScript",
+          "author": "demo_user_25",
+          "score": 7800,
+          "num_comments": 150,
+          "url": "https://example.com/tech-25",
+          "permalink": "/r/programming/comments/demo-25/the_best_free_resources_to_learn_typescript/",
+          "created_utc": 1700240000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-26",
+          "title": "Understanding async await in JavaScript",
+          "author": "demo_user_26",
+          "score": 5600,
+          "num_comments": 190,
+          "url": "https://example.com/tech-26",
+          "permalink": "/r/programming/comments/demo-26/understanding_async_await_in_javascript/",
+          "created_utc": 1700250000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-27",
+          "title": "How to write maintainable CSS at scale",
+          "author": "demo_user_27",
+          "score": 3400,
+          "num_comments": 120,
+          "url": "https://example.com/tech-27",
+          "permalink": "/r/programming/comments/demo-27/how_to_write_maintainable_css_at_scale/",
+          "created_utc": 1700260000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-28",
+          "title": "I'm excited about the future of AI-assisted coding",
+          "author": "demo_user_28",
+          "score": 8900,
+          "num_comments": 760,
+          "url": "https://example.com/tech-28",
+          "permalink": "/r/programming/comments/demo-28/im_excited_about_the_future_of_ai_assisted_coding/",
+          "created_utc": 1700270000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-29",
+          "title": "Dealing with burnout as a software engineer",
+          "author": "demo_user_29",
+          "score": 7100,
+          "num_comments": 540,
+          "url": "https://example.com/tech-29",
+          "permalink": "/r/programming/comments/demo-29/dealing_with_burnout_as_a_software_engineer/",
+          "created_utc": 1700280000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-30",
+          "title": "A rant about over-engineered codebases",
+          "author": "demo_user_30",
+          "score": 6200,
+          "num_comments": 430,
+          "url": "https://example.com/tech-30",
+          "permalink": "/r/programming/comments/demo-30/a_rant_about_over_engineered_codebases/",
+          "created_utc": 1700290000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-31",
+          "title": "Should you still learn Docker in 2026?",
+          "author": "demo_user_31",
+          "score": 4700,
+          "num_comments": 260,
+          "url": "https://example.com/tech-31",
+          "permalink": "/r/programming/comments/demo-31/should_you_still_learn_docker_in_2026/",
+          "created_utc": 1700300000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-32",
+          "title": "The case for monorepos in small teams",
+          "author": "demo_user_32",
+          "score": 3900,
+          "num_comments": 200,
+          "url": "https://example.com/tech-32",
+          "permalink": "/r/programming/comments/demo-32/the_case_for_monorepos_in_small_teams/",
+          "created_utc": 1700310000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-33",
+          "title": "GraphQL vs REST: what we learned the hard way",
+          "author": "demo_user_33",
+          "score": 5500,
+          "num_comments": 310,
+          "url": "https://example.com/tech-33",
+          "permalink": "/r/programming/comments/demo-33/graphql_vs_rest_what_we_learned_the_hard_way/",
+          "created_utc": 1700320000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-34",
+          "title": "I love the new features in the latest IDE release",
+          "author": "demo_user_34",
+          "score": 3100,
+          "num_comments": 95,
+          "url": "https://example.com/tech-34",
+          "permalink": "/r/programming/comments/demo-34/i_love_the_new_features_in_the_latest_ide_release/",
+          "created_utc": 1700330000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-35",
+          "title": "The problem with hiring based on leetcode performance",
+          "author": "demo_user_35",
+          "score": 8400,
+          "num_comments": 620,
+          "url": "https://example.com/tech-35",
+          "permalink": "/r/programming/comments/demo-35/the_problem_with_hiring_based_on_leetcode_performance/",
+          "created_utc": 1700340000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-36",
+          "title": "How we handle incident postmortems",
+          "author": "demo_user_36",
+          "score": 4300,
+          "num_comments": 170,
+          "url": "https://example.com/tech-36",
+          "permalink": "/r/programming/comments/demo-36/how_we_handle_incident_postmortems/",
+          "created_utc": 1700350000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-37",
+          "title": "Please stop recommending regex for HTML parsing",
+          "author": "demo_user_37",
+          "score": 9600,
+          "num_comments": 410,
+          "url": "https://example.com/tech-37",
+          "permalink": "/r/programming/comments/demo-37/please_stop_recommending_regex_for_html_parsing/",
+          "created_utc": 1700360000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-38",
+          "title": "I finally understand dependency injection",
+          "author": "demo_user_38",
+          "score": 2900,
+          "num_comments": 110,
+          "url": "https://example.com/tech-38",
+          "permalink": "/r/programming/comments/demo-38/i_finally_understand_dependency_injection/",
+          "created_utc": 1700370000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-39",
+          "title": "The decline of software craftsmanship",
+          "author": "demo_user_39",
+          "score": 5200,
+          "num_comments": 380,
+          "url": "https://example.com/tech-39",
+          "permalink": "/r/programming/comments/demo-39/the_decline_of_software_craftsmanship/",
+          "created_utc": 1700380000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-40",
+          "title": "A friendly reminder to take breaks while coding",
+          "author": "demo_user_40",
+          "score": 6100,
+          "num_comments": 140,
+          "url": "https://example.com/tech-40",
+          "permalink": "/r/programming/comments/demo-40/a_friendly_reminder_to_take_breaks_while_coding/",
+          "created_utc": 1700390000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-41",
+          "title": "Lessons learned from a failed startup",
+          "author": "demo_user_41",
+          "score": 7300,
+          "num_comments": 290,
+          "url": "https://example.com/tech-41",
+          "permalink": "/r/programming/comments/demo-41/lessons_learned_from_a_failed_startup/",
+          "created_utc": 1700400000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-42",
+          "title": "The ultimate guide to git workflows",
+          "author": "demo_user_42",
+          "score": 8000,
+          "num_comments": 230,
+          "url": "https://example.com/tech-42",
+          "permalink": "/r/programming/comments/demo-42/the_ultimate_guide_to_git_workflows/",
+          "created_utc": 1700410000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-43",
+          "title": "Why accessibility should not be an afterthought",
+          "author": "demo_user_43",
+          "score": 5700,
+          "num_comments": 180,
+          "url": "https://example.com/tech-43",
+          "permalink": "/r/programming/comments/demo-43/why_accessibility_should_not_be_an_afterthought/",
+          "created_utc": 1700420000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-44",
+          "title": "I think serverless is overrated for most use cases",
+          "author": "demo_user_44",
+          "score": 4600,
+          "num_comments": 500,
+          "url": "https://example.com/tech-44",
+          "permalink": "/r/programming/comments/demo-44/i_think_serverless_is_overrated_for_most_use_cases/",
+          "created_utc": 1700430000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-45",
+          "title": "How to prepare for a system design interview",
+          "author": "demo_user_45",
+          "score": 6900,
+          "num_comments": 210,
+          "url": "https://example.com/tech-45",
+          "permalink": "/r/programming/comments/demo-45/how_to_prepare_for_a_system_design_interview/",
+          "created_utc": 1700440000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-46",
+          "title": "The joy of deleting dead code",
+          "author": "demo_user_46",
+          "score": 8800,
+          "num_comments": 160,
+          "url": "https://example.com/tech-46",
+          "permalink": "/r/programming/comments/demo-46/the_joy_of_deleting_dead_code/",
+          "created_utc": 1700450000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-47",
+          "title": "My honest thoughts on code bootcamps",
+          "author": "demo_user_47",
+          "score": 5000,
+          "num_comments": 440,
+          "url": "https://example.com/tech-47",
+          "permalink": "/r/programming/comments/demo-47/my_honest_thoughts_on_code_bootcamps/",
+          "created_utc": 1700460000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-48",
+          "title": "The importance of writing good commit messages",
+          "author": "demo_user_48",
+          "score": 3600,
+          "num_comments": 130,
+          "url": "https://example.com/tech-48",
+          "permalink": "/r/programming/comments/demo-48/the_importance_of_writing_good_commit_messages/",
+          "created_utc": 1700470000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-49",
+          "title": "Why I still love Vim after 15 years",
+          "author": "demo_user_49",
+          "score": 4200,
+          "num_comments": 310,
+          "url": "https://example.com/tech-49",
+          "permalink": "/r/programming/comments/demo-49/why_i_still_love_vim_after_15_years/",
+          "created_utc": 1700480000
+        }
+      },
+      {
+        "kind": "t3",
+        "data": {
+          "id": "demo-50",
+          "title": "What every junior developer should know about security",
+          "author": "demo_user_50",
+          "score": 7500,
+          "num_comments": 270,
+          "url": "https://example.com/tech-50",
+          "permalink": "/r/programming/comments/demo-50/what_every_junior_developer_should_know_about_security/",
+          "created_utc": 1700490000
+        }
+      }
+    ]
+  }
+}

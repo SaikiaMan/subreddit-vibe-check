@@ -83,17 +83,6 @@ body {
   color: #a1a0a0;
 }
 
-/* Recharts dark theme overrides */
-.recharts-cartesian-grid-horizontal line,
-.recharts-cartesian-grid-vertical line {
-  stroke: #252525;
-}
-
-.recharts-text {
-  fill: #676767;
-}
-
-/* Scrollbar styling for dashboard */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;

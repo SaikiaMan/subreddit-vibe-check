@@ -11,55 +11,64 @@ export function VibeCard({ overallVibe, total }: VibeCardProps) {
       emoji: "😊",
       label: "Positive",
       description:
-        "This community is feeling upbeat and optimistic right now.",
-      color: "#22c55e",
+        "The community is showing a generally positive sentiment across the latest hot posts.",
+      borderColor: "border-green-200",
+      bgColor: "bg-green-50",
+      textColor: "text-green-700",
+      iconBg: "bg-green-100",
     },
     neutral: {
       emoji: "😐",
       label: "Neutral",
       description:
-        "This community has a balanced mix of sentiments right now.",
-      color: "#a1a0a0",
+        "The community has a balanced mix of sentiments across the latest hot posts.",
+      borderColor: "border-slate-200",
+      bgColor: "bg-slate-50",
+      textColor: "text-slate-700",
+      iconBg: "bg-slate-100",
     },
     negative: {
       emoji: "😞",
       label: "Negative",
       description:
-        "This community is feeling frustrated or concerned right now.",
-      color: "#ef4444",
+        "The community is showing a generally negative sentiment across the latest hot posts.",
+      borderColor: "border-red-200",
+      bgColor: "bg-red-50",
+      textColor: "text-red-700",
+      iconBg: "bg-red-100",
     },
   };
 
   const c = config[overallVibe];
 
   return (
-    <div className="rounded-lg bg-card p-5">
-      <div className="flex items-start gap-4">
+    <section
+      className={`rounded-2xl border ${c.borderColor} ${c.bgColor} p-6 sm:p-8`}
+    >
+      <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
         <div
-          className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl text-4xl"
-          style={{ backgroundColor: "#2d2d2d" }}
+          className={`flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl ${c.iconBg} text-3xl sm:h-20 sm:w-20 sm:text-4xl`}
           aria-hidden="true"
         >
           {c.emoji}
         </div>
         <div>
-          <p
-            className="text-xs font-semibold uppercase tracking-wider"
-            style={{ color: c.color }}
-          >
+          <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
             Community Vibe
           </p>
-          <h2 className="mt-1 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2
+            className={`mt-1 text-3xl font-bold tracking-tight sm:text-4xl ${c.textColor}`}
+          >
             {c.label}
           </h2>
-          <p className="mt-1 max-w-xl text-sm text-gray-400">
+          <p className="mt-1 max-w-xl text-sm text-slate-600">
             {c.description}
           </p>
-          <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-gray-500">
-            {total} hot posts analyzed
+          <p className="mt-3 text-xs font-semibold uppercase tracking-wider text-slate-500">
+            {total} posts analyzed
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
