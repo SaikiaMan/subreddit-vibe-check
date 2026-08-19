@@ -4,8 +4,7 @@
 A Reddit community sentiment dashboard that analyzes the titles of the top 50 Hot posts from a selected subreddit and presents the results as an easy-to-understand community vibe.
 
 ## Live Demo
-
-[View the live application](YOUR_VERCEL_URL_HERE)
+https://subreddit-vibe-check-beryl.vercel.app/?subreddit=hello
 
 ## Source Code
 
